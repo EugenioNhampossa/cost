@@ -8,6 +8,11 @@ function Selecct({ text, name, options, handleOnChange, value }) {
         <option selected disabled>
           Select project type
         </option>
+        {options.map((option) => (
+          <option value={option.id} key={option.id}>
+            {option.name}
+          </option>
+        ))}
       </select>
     </div>
   );
